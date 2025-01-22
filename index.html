@@ -4,19 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tabela de Troca de Óleo</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
 <!--Cabeçalho-->
 
   <body>
     <div class="header">
-        <img src="/IMG/LOGO/troca de oleo.jpg" alt="Alexandre Lopes - Desenvolvedor" class="logo" title="Alexandre Lopes - Desenvolvedor">
+        <img src="logo.jpg" alt="Alexandre Lopes - Desenvolvedor" class="logo" title="Alexandre Lopes - Desenvolvedor">
         <h2>REGISTRO DE MANUTENÇÃO DE ÓLEO</h2>       
     </div>
-    <h3>Desenvolvido por Alexandre</h3>
-    
+    <h3>Desenvolvido por Alexandre</h3> 
     <br>
+    <div class="login-container">
+      <h3>Faça login para editar a tabela</h3>
+      <form id="loginForm">
+          <label for="username">Usuário:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" required>
+          <button type="submit">Login</button>
+          <p id="loginMessage"></p>
+      </form>
+  </div>
     <div class="container">
       <table>
         <thead>
@@ -34,7 +44,7 @@
           <tr>
             <td class="non-editable">MT-106</td>
             <td>
-              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+              <input list="nomesColaboradores"/>
               <datalist id="nomesColaboradores">
                 <option value="Adelson Amaro Dos Santos"></option>
                 <option value="Adriano André Chaves De Lima"></option>
@@ -60,17 +70,17 @@
                 <option value="Washington Costa Da Silva Rodrigues"></option>
               </datalist>
             </td>
-            <td><input type="number" placeholder="Km Atual aqui" /></td>
-            <td><input type="number" placeholder="Próx. KM aqui" /></td>
+            <td><input type="number"/></td>
+            <td><input type="number"/></td>
             <td>
-              <input list="oleosUsados" placeholder="Escolha um óleo" />
+              <input list="oleosUsados"/>
               <datalist id="oleosUsados">
                 <option value="ÓLEO MOTO 20W50 4T GP LUBRAX"></option>
                 <option value="ÓLEO MOTO 10W30 4T SYNTHETIC 100%"></option>
               </datalist>
             </td>
             <td><input type="date" /></td>
-            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+            <td><input type="text"/></td>
           </tr>
           <tr>
             <td class="non-editable">MT-107</td>
@@ -350,6 +360,6 @@
         </tbody>
       </table>
     </div>
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>
