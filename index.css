@@ -1,10 +1,11 @@
+
 body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-    background-image: url(/IMG/FUNDO/troca-de-óleo.jpg);
+    background-image: url(/IMG/troca-de-óleo.jpg);
     background-size: cover;
 }
 .header {
