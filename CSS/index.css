@@ -1,0 +1,178 @@
+body {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url(/IMG/FUNDO/troca-de-óleo.jpg);
+    background-size: cover;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #000000;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+    margin: 50;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 3px solid black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;  /* Borda preta */
+}
+
+table, th, td {
+    border: 1px solid #000000;  /* Borda preta */
+}
+
+th {
+    background-color: #007bff;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;  /* Centralizar texto nas colunas */
+    border: 3px solid black;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;  /* Centralizar texto nas colunas */
+}
+
+td {
+    word-wrap: break-word;  /* Fazer o texto caber na célula */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+input, datalist {
+    width: 100%;
+    border: none;
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="date"] {
+    border: 1px solid #ced4da;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.non-editable {
+    background-color: #f0f0f0;
+    pointer-events: none;
+    color: #6c757d;
+    text-align: center;  /* Centralizar texto na coluna VT/MT */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    th, td {
+        padding: 8px;
+    }
+    input, datalist {
+        padding: 6px;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        padding: 6px;
+        font-size: 0.875em;
+    }
+    input, datalist {
+        padding: 5px;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+}
+
+@media (min-width: 1200px) {
+    th, td {
+        padding: 14px;
+    }
+    input, datalist {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 2em;
+    }
+}
+
+/* Estilos para impressão */
+@media print {
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+    }
+    table {
+        width: 100%;
+        border: 1px solid #000000;
+    }
+    .header, .date {
+        width: 100%;
+        text-align: center;
+    }
+    .header img {
+        display: none; /* Esconder a logo na impressão */
+    }
+    h2 {
+        font-size: 1.5em;
+        border: none;
+        background: none;
+    }
+}

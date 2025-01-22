@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela de Troca de Óleo</title>
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+<!--Cabeçalho-->
+
+  <body>
+    <div class="header">
+        <img src="/IMG/LOGO/troca de oleo.jpg" alt="Alexandre Lopes - Desenvolvedor" class="logo" title="Alexandre Lopes - Desenvolvedor">
+        <h2>REGISTRO DE MANUTENÇÃO DE ÓLEO</h2>       
+    </div>
+    <h3>Desenvolvido por Alexandre</h3>
+    
+    <br>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>VT/MT</th>
+            <th>Nome</th>
+            <th>Km atual</th>
+            <th>Próx. troca</th>
+            <th>Óleo usado</th>
+            <th>Dados de troca</th>
+            <th>Aviso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="non-editable">MT-106</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+              <datalist id="nomesColaboradores">
+                <option value="Adelson Amaro Dos Santos"></option>
+                <option value="Adriano André Chaves De Lima"></option>
+                <option value="Altamir Francisco dos Santos"></option>
+                <option value="Anderson Felix Da Silva"></option>
+                <option value="Anderson Ferreira Da Silva"></option>
+                <option value="Andevi Pereira Da Silva"></option>
+                <option value="Cleidson Rodrigues de Lima"></option>
+                <option value="Filipe Santana De Moura"></option>
+                <option value="José Carlos Miranda De Oliveira"></option>
+                <option value="José Daivid Gouveia"></option>
+                <option value="José Henrique Simplício Gomes"></option>
+                <option value="Leandro Pereira Da Silva"></option>
+                <option value="Luis Alex Da Silva"></option>
+                <option value="Luiz Abel Diogo Júnior"></option>
+                <option value="Marcos Antônio B. Da Silva"></option>
+                <option value="Marcos Antonio da Silva Campos Junior"></option>
+                <option value="Rafael Ramos Dos Santos"></option>
+                <option value="Rodrigo Barbosa Nascimento"></option>
+                <option value="Shirleno Freire Da Silva"></option>
+                <option value="Thiago José Nogueira da Silva"></option>
+                <option value="Vagner Eduardo Santos"></option>
+                <option value="Washington Costa Da Silva Rodrigues"></option>
+              </datalist>
+            </td>
+            <td><input type="number" placeholder="Km Atual aqui" /></td>
+            <td><input type="number" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+              <datalist id="oleosUsados">
+                <option value="ÓLEO MOTO 20W50 4T GP LUBRAX"></option>
+                <option value="ÓLEO MOTO 10W30 4T SYNTHETIC 100%"></option>
+              </datalist>
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-107</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-108</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-109</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-110</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+
+          <tr>
+            <td class="non-editable">MT-111</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-112</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-113</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-114</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-115</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-116</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-117</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-118</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-119</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-120</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-121</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-122</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-123</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-124</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-125</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="non-editable">MT-126</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+          <tr>
+            <td class="non-editable">MT-127</td>
+            <td>
+              <input list="nomesColaboradores" placeholder="Escolha um nome" />
+            </td>
+            <td><input type="text" placeholder="Km Atual aqui" /></td>
+            <td><input type="text" placeholder="Próx. KM aqui" /></td>
+            <td>
+              <input list="oleosUsados" placeholder="Escolha um óleo" />
+            </td>
+            <td><input type="date" /></td>
+            <td><input type="text" placeholder="Coloque o aviso aqui" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="/JS/index.js"></script>
+  </body>
+</html>
