@@ -1,20 +1,21 @@
-
+/*ABRANGE A PAGINA TOTAL*/
 body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-    background-image: url(/troca.jpg);
+    background-image: url(/IMG/FIGURAS/troca.jpg);
     background-size: cover;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-
+/*LOGO MARCA CIRCULAR NO TOPO*/
 .logo {
     width: 100px;
     height: 100px;
@@ -22,24 +23,44 @@ body {
     border-radius: 50%;
     flex-shrink: 0;
 }
-
+/*SEGUNDO TITULO ONDE DIZ FAÇA LOGIN*/
 h2 {
     text-align: center;
     color: #000000;
-    margin: 50;
-
+    margin: 50px;
 }
-
+/*QUADRADO QUE CONTEM O BOTÃO AZUL E OS ESPAÇOS PARA COLOCAR SENHA E LOGIN*/
 .login-container {
+    justify-content: space-between;
+    padding: 0PX 12PX;
     text-align: center;
     margin-bottom: 20px;
+
 }
 
+/*ESPAÇOS PARA INSERIR O NOME E SENHA PARA LOGIN*/
 .login-container input {
     padding: 8px;
     margin: 5px;
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 300px; /* Largura máxima */
+    border: 1px solid #000000; /* Borda preta */
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+input[type="text"], input[type="date"], input[type="number"], input[type="password"] {
+    border: 1px solid #ffffff; /* Borda preta */
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, input[type="number"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+
+/*BOTÃO AZUL DE LOGIN*/
 .login-container button {
     padding: 10px 15px;
     background-color: #007bff;
@@ -48,16 +69,38 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
 }
-
+/*EFEITO PARA O BOTÃO AZUL DE LOGIN*/
 .login-container button:hover {
     background-color: #0056b3;
 }
-
+/*QUANDO LOGADO APARECERÁ UMA MENSAGEM DIZENDO QUE FOI FEITO O LOGIN*/
 #loginMessage {
     color: red;
     margin-top: 10px;
 }
+/*MOSTRA QUE ESTÁ LOGADO EM AZUL LOGIN*/
+.user-status {
+    margin: 10px;
+    font-size: 1em;
+    color: #007bff;
+}
 
+/*BOTÃO QUE DESLOGA E BOTÃO QUE SALTA ALTERAÇÃO*/
+.btn-small {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+/*EFEITOS PARA O BOTÃO QUE DESLOGA E BOTÃOO QUE SALTA ALTERAÇÃO*/
+.btn-small:hover {
+    background-color: #218838;
+}
+
+/*QUADRADO QUE CONTEM TODA A TABELA*/
 .container {
     width: 100%;
     max-width: 1200px;
@@ -68,6 +111,7 @@ h2 {
     border-radius: 8px;
     border: 3px solid black;
 }
+
 
 table {
     width: 100%;
@@ -120,7 +164,7 @@ input, datalist {
 }
 
 input[type="text"], input[type="date"] {
-    border: 1px solid #ced4da;
+    border: 1px solid #ffffff;
     outline: none;
 }
 

@@ -27,6 +27,38 @@ function loadData() {
     }
 }
 
+// Função para mostrar quem está logado
+function updateUserStatus(username) {
+    const userStatus = document.getElementById("userStatus");
+    if (username) {
+        userStatus.textContent = `Logado como: ${username}`;
+    } else {
+        userStatus.textContent = '';
+    }
+}
+
+// Event listener para o formulário de login
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    updateUserStatus(username);
+    document.getElementById("loginMessage").textContent = 'Login bem-sucedido!';
+    // Aqui você pode adicionar a lógica adicional para autenticação
+});
+
+// Event listener para deslogar
+document.getElementById("logoutButton").addEventListener("click", () => {
+    updateUserStatus(null);
+    alert("Deslogado com sucesso!");
+    window.location.reload(); // Exemplo simples de recarregar a página
+});
+
+// Event listener para salvar dados manualmente
+document.getElementById("saveButton").addEventListener("click", () => {
+    saveData();
+    alert("Alterações salvas com sucesso!");
+});
+
 // Event listeners para salvar os dados ao editar as células
 document.querySelectorAll("input").forEach(input => {
     input.addEventListener("input", saveData);
@@ -34,5 +66,3 @@ document.querySelectorAll("input").forEach(input => {
 
 // Carregar os dados ao carregar a página
 window.addEventListener("load", loadData);
-
-// A função de deletar todos os dados ao pressionar a tecla delete foi removida daqui
