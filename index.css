@@ -145,7 +145,7 @@ td {
 }
 
 tbody tr:nth-child(even) {
-    background-color: rgb(85, 74, 74);
+    background-color: wh;
 }
 
 tbody tr:hover {
