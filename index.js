@@ -1,6 +1,6 @@
 // Lista de usuários permitidos e suas senhas
 const users = {
-    "alexandre": "2013",
+    "alex": "1985", // Atualizado
     "magno": "2014",
     "anderson": "1971",
     "massena": "1980",
