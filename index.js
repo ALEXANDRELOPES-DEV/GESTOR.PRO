@@ -1,3 +1,15 @@
+// Lista de usuários permitidos e suas senhas
+const users = {
+    "alexandre": "2013",
+    "magno": "2014",
+    "anderson": "1971",
+    "massena": "1980",
+    "douglas": "2022",
+    "clovis": "2028",
+    "patricio": "2100",
+    "roberto": "2099"
+};
+
 // Função para salvar os dados no localStorage
 function saveData() {
     const rows = document.querySelectorAll("tbody tr");
@@ -37,19 +49,35 @@ function updateUserStatus(username) {
     }
 }
 
+// Função para habilitar ou desabilitar edição das células
+function toggleEditCells(enable) {
+    const inputs = document.querySelectorAll("tbody input");
+    inputs.forEach(input => {
+        input.disabled = !enable;
+    });
+}
+
 // Event listener para o formulário de login
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const username = document.getElementById("username").value;
-    updateUserStatus(username);
-    document.getElementById("loginMessage").textContent = 'Login bem-sucedido!';
-    // Aqui você pode adicionar a lógica adicional para autenticação
+    const password = document.getElementById("password").value;
+
+    if (users[username] === password) {
+        updateUserStatus(username);
+        document.getElementById("loginMessage").textContent = 'Login bem-sucedido!';
+        toggleEditCells(true); // Habilita a edição das células após login
+    } else {
+        document.getElementById("loginMessage").textContent = 'Usuário ou senha incorretos!';
+        toggleEditCells(false); // Desabilita a edição das células
+    }
 });
 
 // Event listener para deslogar
 document.getElementById("logoutButton").addEventListener("click", () => {
     updateUserStatus(null);
     alert("Deslogado com sucesso!");
+    toggleEditCells(false); // Desabilita a edição das células após deslogar
     window.location.reload(); // Exemplo simples de recarregar a página
 });
 
@@ -60,9 +88,12 @@ document.getElementById("saveButton").addEventListener("click", () => {
 });
 
 // Event listeners para salvar os dados ao editar as células
-document.querySelectorAll("input").forEach(input => {
+document.querySelectorAll("tbody input").forEach(input => {
     input.addEventListener("input", saveData);
 });
 
 // Carregar os dados ao carregar a página
-window.addEventListener("load", loadData);
+window.addEventListener("load", () => {
+    loadData();
+    toggleEditCells(false); // Desabilita a edição das células inicialmente
+});
