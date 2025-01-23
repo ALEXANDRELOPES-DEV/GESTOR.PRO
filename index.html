@@ -21,13 +21,24 @@
       <h3>Faça login para editar a tabela</h3>
       <form id="loginForm">
           <label for="username">Usuário:</label>
-          <input type="text" id="username" name="username" required>
+          <input list="usernames" id="username" name="username" required>
+          <datalist id="usernames">
+              <option value="alex"></option>
+              <option value="magno"></option>
+              <option value="anderson"></option>
+              <option value="massena"></option>
+              <option value="douglas"></option>
+              <option value="clovis"></option>
+              <option value="patricio"></option>
+              <option value="roberto"></option>
+          </datalist>
           <label for="password">Senha:</label>
           <input type="password" id="password" name="password" required>
           <button type="submit">Login</button>
           <p id="loginMessage"></p>
       </form>
   </div>
+  
   <div class="status-container">
     <div id="userStatus" class="user-status"></div>
     <button class="btn-small" id="logoutButton">Deslogar</button>
@@ -365,6 +376,8 @@
           </tr>
         </tbody>
       </table>
+
+      <div id="historico" class="historico"></div> <!-- Contêiner para o histórico -->
     </div>
     <script src="index.js"></script>
   </body>

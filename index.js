@@ -10,6 +10,9 @@ const users = {
     "roberto": "2099"
 };
 
+// Variável para armazenar o usuário logado
+let currentUser = null;
+
 // Função para salvar os dados no localStorage
 function saveData() {
     const rows = document.querySelectorAll("tbody tr");
@@ -23,6 +26,7 @@ function saveData() {
         tableData.push(rowData);
     });
     localStorage.setItem("tableData", JSON.stringify(tableData));
+    displayHistorico();
 }
 
 // Função para carregar os dados do localStorage
@@ -39,13 +43,45 @@ function loadData() {
     }
 }
 
+// Função para fazer o backup dos dados
+function backupData() {
+    const tableData = JSON.parse(localStorage.getItem("tableData"));
+    if (tableData) {
+        localStorage.setItem("backupData", JSON.stringify(tableData));
+        alert("Backup realizado com sucesso!");
+    } else {
+        alert("Nenhum dado encontrado para backup!");
+    }
+}
+
+// Função para restaurar o backup dos dados
+function restoreBackup() {
+    const backupData = JSON.parse(localStorage.getItem("backupData"));
+    if (backupData) {
+        localStorage.setItem("tableData", JSON.stringify(backupData));
+        loadData();
+        alert("Backup restaurado com sucesso!");
+    } else {
+        alert("Nenhum backup encontrado!");
+    }
+}
+
 // Função para mostrar quem está logado
 function updateUserStatus(username) {
     const userStatus = document.getElementById("userStatus");
+    const logoutButton = document.getElementById("logoutButton");
+    const saveButton = document.getElementById("saveButton");
+
     if (username) {
         userStatus.textContent = `Logado como: ${username}`;
+        currentUser = username; // Atualiza o usuário logado
+        logoutButton.disabled = false; // Habilita o botão Deslogar
+        saveButton.disabled = false; // Habilita o botão Salvar Alterações
     } else {
         userStatus.textContent = '';
+        currentUser = null;
+        logoutButton.disabled = true; // Desabilita o botão Deslogar
+        saveButton.disabled = true; // Desabilita o botão Salvar Alterações
     }
 }
 
@@ -56,6 +92,19 @@ function toggleEditCells(enable) {
         input.disabled = !enable;
     });
 }
+
+// Função para exibir o histórico de alterações
+function displayHistorico() {
+    const historico = document.getElementById("historico");
+    const historicoData = JSON.parse(localStorage.getItem("historicoData"));
+    if (historicoData) {
+        historico.innerHTML = "<h3>Histórico de Alterações:</h3><ul>";
+        historicoData.forEach(entry => {
+            historico.innerHTML += `<li>Usuário: ${entry.usuario}, VT/MT: ${entry.vt_mt}, KM Atual: ${entry.km_atual}, Próx. Troca: ${entry.prox_troca}, Óleo Usado: ${entry.oleo_usado}</li>`;
+        });
+        historico.innerHTML += "</ul>";
+    }
+}   
 
 // Event listener para o formulário de login
 document.getElementById("loginForm").addEventListener("submit", function(event) {
@@ -83,9 +132,12 @@ document.getElementById("logoutButton").addEventListener("click", () => {
 
 // Event listener para salvar dados manualmente
 document.getElementById("saveButton").addEventListener("click", () => {
+    if (!currentUser) return; // Verifica se há um usuário logado
     saveData();
     alert("Alterações salvas com sucesso!");
 });
+
+
 
 // Event listeners para salvar os dados ao editar as células
 document.querySelectorAll("tbody input").forEach(input => {
@@ -96,4 +148,6 @@ document.querySelectorAll("tbody input").forEach(input => {
 window.addEventListener("load", () => {
     loadData();
     toggleEditCells(false); // Desabilita a edição das células inicialmente
+    document.getElementById("logoutButton").disabled = true; // Desabilita o botão Deslogar inicialmente
+    document.getElementById("saveButton").disabled = true; // Desabilita o botão Salvar Alterações inicialmente
 });
