@@ -151,3 +151,25 @@ window.addEventListener("load", () => {
     document.getElementById("logoutButton").disabled = true; // Desabilita o botão Deslogar inicialmente
     document.getElementById("saveButton").disabled = true; // Desabilita o botão Salvar Alterações inicialmente
 });
+const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    databaseURL: "YOUR_DATABASE_URL",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+// Escrever dados
+firebase.database().ref('caminho/para/dados').set({
+    chave: "valor"
+  });
+  
+  // Ler dados
+  firebase.database().ref('caminho/para/dados').on('value', (snapshot) => {
+    const data = snapshot.val();
+    console.log(data);
+  });
+    
